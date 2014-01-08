@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F755F335-E99C-4469-B0BC-959B0C192632}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>NI_ex</RootNamespace>
+    <ProjectName>MARIO</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>C:\OpenCV2.2\lib;C:\OpenNI2\Lib;C:\boost\boost_1_50\lib;C:\DxLib;C:\Lua\5.1\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\OpenCV2.2\include;C:\OpenNI2\Include;C:\boost\boost_1_50;C:\DxLib;C:\;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)\</OutDir>
+    <TargetName>deruChara_debug</TargetName>
+    <IntDir>..\mid</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>C:\OpenCV2.2\lib;C:\OpenNI2\Lib;C:\boost\boost_1_50\lib;C:\DxLib;C:\Lua\5.1\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\OpenCV2.2\include;C:\OpenNI2\Include;C:\boost\boost_1_50;C:\DxLib;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)\</OutDir>
+    <TargetName>deruChara_release</TargetName>
+    <IntDir>..\mid</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level1</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>C:\OpenNI2\Include;C:\Lua\5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4482;4996</DisableSpecificWarnings>
+      <ForcedIncludeFiles>StdAfx.h</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\OpenNI2\Lib;C:\OpenCV2.2\lib;C:\Lua\5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OpenNI2.lib;lua51.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>C:\OpenNI2\Include;C:\Lua\5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4482;4996</DisableSpecificWarnings>
+      <ForcedIncludeFiles>StdAfx.h</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\OpenNI2\Lib;C:\OpenCV2.2\lib;C:\Lua\5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OpenNI2.lib;lua51.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="out.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Arduino\main.cpp" />
+    <ClCompile Include="Arduino\winrs.cpp" />
+    <ClCompile Include="Block.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="DrawBuffer.cpp" />
+    <ClCompile Include="FT.cpp" />
+    <ClCompile Include="Image.cpp" />
+    <ClCompile Include="MemMapFile.cpp" />
+    <ClCompile Include="Mouse.cpp" />
+    <ClCompile Include="Mover.cpp" />
+    <ClCompile Include="depth_sample.cpp" />
+    <ClCompile Include="GameLib.cpp" />
+    <ClCompile Include="GameMain.cpp" />
+    <ClCompile Include="IO.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
+    <ClCompile Include="macro.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="main_color.cpp" />
+    <ClCompile Include="main_depth.cpp" />
+    <ClCompile Include="main_IR.cpp" />
+    <ClCompile Include="mycv.cpp" />
+    <ClCompile Include="RealField.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Arduino\ifline.h" />
+    <ClInclude Include="Arduino\winrs.h" />
+    <ClInclude Include="Block.hpp" />
+    <ClInclude Include="Camera.hpp" />
+    <ClInclude Include="DrawBuffer.hpp" />
+    <ClInclude Include="FT.hpp" />
+    <ClInclude Include="Image.hpp" />
+    <ClInclude Include="LokiExport.h" />
+    <ClInclude Include="luas.hpp" />
+    <ClInclude Include="MemMapFile.hpp" />
+    <ClInclude Include="Mouse.hpp" />
+    <ClInclude Include="Mover.hpp" />
+    <ClInclude Include="defines.hpp" />
+    <ClInclude Include="GameLib.hpp" />
+    <ClInclude Include="GameMain.hpp" />
+    <ClInclude Include="includes.hpp" />
+    <ClInclude Include="IO.hpp" />
+    <ClInclude Include="Keyboard.hpp" />
+    <ClInclude Include="link.hpp" />
+    <ClInclude Include="macro.hpp" />
+    <ClInclude Include="Main.hpp" />
+    <ClInclude Include="Mutex.hpp" />
+    <ClInclude Include="mycv.hpp" />
+    <ClInclude Include="MyDxLib.hpp" />
+    <ClInclude Include="Observer.hpp" />
+    <ClInclude Include="Point.hpp" />
+    <ClInclude Include="Point3D_mm.h" />
+    <ClInclude Include="ProjecterControl.h" />
+    <ClInclude Include="RealField.hpp" />
+    <ClInclude Include="Rect.hpp" />
+    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="Singleton.hpp" />
+    <ClInclude Include="SoundManager.hpp" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="Thread.h" />
+    <ClInclude Include="Threads.h" />
+    <ClInclude Include="Timer.hpp" />
+    <ClInclude Include="utils.hpp" />
+    <ClInclude Include="Wave.hpp" />
+    <ClInclude Include="WinClass.h" />
+    <ClInclude Include="Window.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

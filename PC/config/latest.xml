@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE boost_serialization>
+<boost_serialization signature="serialization::archive" version="9">
+<Root class_id="0" tracking_level="0" version="0">
+	<savedTime class_id="1" tracking_level="0" version="0">
+		<year>2013</year>
+		<month>6</month>
+		<day>19</day>
+		<hour>17</hour>
+		<min>45</min>
+		<sec>17</sec>
+	</savedTime>
+	<zoom>1</zoom>
+	<cameraPos class_id="2" tracking_level="0" version="0">
+		<x>100</x>
+		<y>700</y>
+	</cameraPos>
+	<startPoint>
+		<x>0</x>
+		<y>0</y>
+	</startPoint>
+	<zPixel>0</zPixel>
+	<deskRect class_id="3" tracking_level="0" version="0">
+		<p1>
+			<x>127</x>
+			<y>101</y>
+		</p1>
+		<p2>
+			<x>433</x>
+			<y>343</y>
+		</p2>
+	</deskRect>
+	<displayBiasPoint>
+		<x>0</x>
+		<y>0</y>
+	</displayBiasPoint>
+	<additionalActuatorDown_mm>30</additionalActuatorDown_mm>
+	<additionalShadowNear_mm>5</additionalShadowNear_mm>
+</Root>
+</boost_serialization>
+
